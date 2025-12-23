@@ -49,7 +49,6 @@ jobs:
           SITE_URL: ${{ inputs.site-url }}
         run: |
           npx directus bootstrap
-          npx directus schema apply ./schema/schema.json
 
 # Please do not touch the following action
       - name: Store deployment content
