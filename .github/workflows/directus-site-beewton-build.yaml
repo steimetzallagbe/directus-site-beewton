@@ -36,7 +36,7 @@ jobs:
         env:
           CI: true
           SITE_URL: ${{ inputs.site-url }}
-        run: npm ci
+        run: npm install
 
       - name: Setup Node
         uses: actions/setup-node@v4
@@ -48,8 +48,8 @@ jobs:
           CI: true
           SITE_URL: ${{ inputs.site-url }}
         run: |
-          npm directus bootstrap
-          npm directus schema apply ./schema/schema.json
+          npx directus bootstrap
+          npx directus schema apply ./schema/schema.json
 
 # Please do not touch the following action
       - name: Store deployment content
