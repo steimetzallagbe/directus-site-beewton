@@ -1,0 +1,120 @@
+#version: '3.8'
+
+services:
+  # Base de données PostgreSQL
+  postgres:
+    image: postgres:15-alpine
+    container_name: directus_postgres
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: directus
+      POSTGRES_PASSWORD: directus_password
+      POSTGRES_DB: directus
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    networks:
+      - directus_network
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U directus"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  # Cache Redis
+  redis:
+    image: redis:7-alpine
+    container_name: directus_redis
+    restart: unless-stopped
+    networks:
+      - directus_network
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  # Directus CMS
+  directus:
+    image: directus/directus:latest
+    container_name: directus_app
+    restart: unless-stopped
+    ports:
+      - "8055:8055"
+    environment:
+      # Clés secrètes (à changer en production)
+      KEY: "255d861b-5ea1-5996-9aa3-922530ec40b1"
+      SECRET: "6116487b-cda1-52c2-b5b5-c8022c45e263"
+
+      # Configuration base de données
+      DB_CLIENT: pg
+      DB_HOST: postgres
+      DB_PORT: 5432
+      DB_DATABASE: directus
+      DB_USER: directus
+      DB_PASSWORD: directus_password
+
+      # Configuration cache
+      CACHE_ENABLED: "true"
+      CACHE_STORE: redis
+      REDIS: "redis://redis:6379"
+
+      # Configuration admin (premier lancement)
+      ADMIN_EMAIL: admin@entreprise.com
+      ADMIN_PASSWORD: Admin123!
+
+      # Configuration publique
+      PUBLIC_URL: http://localhost:8055
+
+      # Stockage des fichiers
+      STORAGE_LOCATIONS: local
+      STORAGE_LOCAL_ROOT: /directus/uploads
+
+      # Options supplémentaires
+      CORS_ENABLED: "true"
+      CORS_ORIGIN: "true"
+      
+      # Configuration Email (SMTP IONOS - Port 465 SSL)
+      EMAIL_FROM: "noreply@beewton.com"
+      EMAIL_FROM_NAME: "Beewton"
+      EMAIL_TRANSPORT: "smtp"
+      EMAIL_SMTP_HOST: "smtp.ionos.fr"
+      EMAIL_SMTP_PORT: 465
+      EMAIL_SMTP_SECURE: "true" # Port 465 = true
+      EMAIL_SMTP_USER: "noreply@beewton.com"
+      EMAIL_SMTP_PASSWORD: "dBsNB+mB3s9nD8q" # Les guillemets protègent le caractère +
+      
+      # Paramètres de stabilité
+      EMAIL_SMTP_POOL: "true"
+      EMAIL_SMTP_TIMEOUT: 30000 # 30 secondes
+      EMAIL_SMTP_DEBUG: "true"
+      
+      LOG_LEVEL: "debug"
+      
+      # Sécurité
+      RATE_LIMITER_ENABLED: "true"
+      RATE_LIMITER_POINTS: 25
+      RATE_LIMITER_DURATION: 1
+
+      #Admin Email
+      ADMIN_EMAIL1: contact@beewton.com
+
+    volumes:
+      - directus_uploads:/directus/uploads
+      - ./extensions:/directus/extensions
+    networks:
+      - directus_network
+    depends_on:
+      postgres:
+        condition: service_healthy
+      redis:
+        condition: service_healthy
+
+volumes:
+  postgres_data:
+    driver: local
+  directus_uploads:
+    driver: local
+
+networks:
+  directus_network:
+    driver: bridge

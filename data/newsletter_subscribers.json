@@ -1,0 +1,30 @@
+[
+  {
+    "email": "abonne@example.com",
+    "first_name": "Sophie",
+    "last_name": "Martin",
+    "status": "active",
+    "source": "website_form",
+    "tags": ["client", "newsletter"],
+    "date_subscribed": "2025-11-20T10:30:00Z"
+  },
+  {
+    "email": "nouveau@client.com",
+    "first_name": "Pierre",
+    "last_name": "Durand",
+    "status": "pending",
+    "source": "website_form",
+    "tags": ["lead"],
+    "date_subscribed": "2025-11-21T14:15:00Z"
+  },
+  {
+    "email": "contact@entreprise-xyz.fr",
+    "first_name": "Julie",
+    "last_name": "Petit",
+    "company": "Entreprise XYZ",
+    "status": "active",
+    "source": "manual",
+    "tags": ["client", "entreprise", "newsletter"],
+    "date_subscribed": "2025-10-15T09:00:00Z"
+  }
+]

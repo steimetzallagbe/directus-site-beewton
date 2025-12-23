@@ -1,0 +1,30 @@
+{
+  "collections": [
+    {
+      "collection": "posts",
+      "fields": [
+        {
+          "field": "categories",
+          "type": "alias",
+          "meta": {
+            "interface": "select-dropdown-m2m",
+            "options": { "template": "{{name}}" }
+          }
+        }
+      ]
+    },
+    {
+      "collection": "projects",
+      "fields": [
+        {
+          "field": "gallery",
+          "type": "alias",
+          "meta": {
+            "interface": "file-gallery"
+          }
+        }
+      ]
+    }
+  ]
+}
+    

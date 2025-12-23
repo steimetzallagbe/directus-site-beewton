@@ -1,0 +1,78 @@
+[
+    {
+        "id": "10000000-0000-0000-0000-000000000001",
+        "status": "published",
+        "title": "Développeur Full-Stack React/Next.js",
+        "slug": "developpeur-fullstack-react-nextjs",
+        "description": "<h2>À propos du poste</h2><p>Nous recherchons un développeur full-stack passionné avec une expérience solide en React et Next.js pour rejoindre notre équipe produit. Vous travaillerez sur des projets innovants et contribuerez à l'architecture de nos applications web.</p><h3>Responsabilités</h3><ul><li>Développer et maintenir des applications web avec React/Next.js</li><li>Concevoir et implémenter des APIs REST avec Node.js</li><li>Collaborer avec l'équipe design pour créer des interfaces utilisateur exceptionnelles</li><li>Participer aux revues de code et au mentorat des développeurs juniors</li><li>Optimiser les performances et la scalabilité des applications</li></ul><h3>Profil recherché</h3><ul><li>3-5 ans d'expérience en développement web</li><li>Maîtrise de React, Next.js et TypeScript</li><li>Expérience avec Node.js et PostgreSQL</li><li>Connaissance des bonnes pratiques de développement (tests, CI/CD)</li><li>Esprit d'équipe et excellentes capacités de communication</li></ul>",
+        "excerpt": "Développeur full-stack passionné avec une expérience solide en React et Next.js pour rejoindre notre équipe produit.",
+        "location": "Paris",
+        "contract_type": "CDI",
+        "experience": "3-5 ans",
+        "skills": [
+            "React",
+            "Next.js",
+            "TypeScript",
+            "Node.js",
+            "PostgreSQL"
+        ],
+        "icon": "Code"
+    },
+    {
+        "id": "10000000-0000-0000-0000-000000000002",
+        "status": "published",
+        "title": "Designer UX/UI Senior",
+        "slug": "designer-ux-ui-senior",
+        "excerpt": "Designer UX/UI Senior",
+        "description": "<h2>À propos du poste</h2><p>Rejoignez notre équipe de design pour créer des expériences utilisateur exceptionnelles et des interfaces modernes. Vous serez responsable de la conception de nos produits digitaux de bout en bout.</p><h3>Responsabilités</h3><ul><li>Concevoir des interfaces utilisateur intuitives et esthétiques</li><li>Conduire des recherches utilisateurs et des tests d'usabilité</li><li>Créer et maintenir notre design system</li><li>Collaborer étroitement avec les développeurs et les product managers</li><li>Prototyper rapidement des concepts avec Figma</li></ul><h3>Profil recherché</h3><ul><li>5+ ans d'expérience en design UX/UI</li><li>Portfolio démontrant votre expertise en design d'interfaces</li><li>Maîtrise de Figma et des outils de prototypage</li><li>Connaissance des principes d'accessibilité (RGAA)</li><li>Excellentes compétences en communication et présentation</li></ul>",
+        "location": "Paris",
+        "contract_type": "CDI",
+        "experience": "5+ ans",
+        "skills": [
+            "Figma",
+            "Design System",
+            "Prototypage",
+            "Recherche UX",
+            "RGAA"
+        ],
+        "icon": "Palette"
+    },
+    {
+        "id": "10000000-0000-0000-0000-000000000003",
+        "status": "published",
+        "title": "Data Engineer",
+        "slug": "data-engineer",
+        "excerpt": "Data Engineer",
+        "description": "<h2>À propos du poste</h2><p>Construisez notre infrastructure data moderne et scalable pour traiter des millions d'événements par jour. Vous serez au cœur de notre stratégie data et contribuerez à la prise de décision basée sur les données.</p><h3>Responsabilités</h3><ul><li>Concevoir et maintenir notre data warehouse</li><li>Développer des pipelines de données robustes et scalables</li><li>Optimiser les performances des requêtes et du stockage</li><li>Collaborer avec les data scientists et les analystes</li><li>Mettre en place les bonnes pratiques de gouvernance des données</li></ul><h3>Profil recherché</h3><ul><li>3-5 ans d'expérience en data engineering</li><li>Maîtrise de Python et SQL</li><li>Expérience avec Airflow, dbt et AWS</li><li>Connaissance des architectures data modernes</li><li>Capacité à travailler sur des problématiques complexes</li></ul>",
+        "location": "Paris / Cotonou",
+        "contract_type": "CDI",
+        "experience": "3-5 ans",
+        "skills": [
+            "Python",
+            "SQL",
+            "Airflow",
+            "dbt",
+            "AWS"
+        ],
+        "icon": "Database"
+    },
+    {
+        "id": "10000000-0000-0000-0000-000000000004",
+        "status": "published",
+        "title": "Consultant Cloud Senior",
+        "slug": "consultant-cloud-senior",
+        "description": "<h2>À propos du poste</h2><p>Consultant expérimenté en architectures cloud pour accompagner nos clients dans leur transformation digitale. Vous interviendrez sur des missions stratégiques et techniques auprès de grands comptes.</p><h3>Responsabilités</h3><ul><li>Concevoir des architectures cloud scalables et sécurisées</li><li>Accompagner les clients dans leur migration vers le cloud</li><li>Mettre en place des pratiques DevOps et FinOps</li><li>Former les équipes techniques des clients</li><li>Réaliser des audits d'infrastructure et de sécurité</li></ul><h3>Profil recherché</h3><ul><li>5+ ans d'expérience en architecture cloud</li><li>Certifications AWS, Azure ou GCP</li><li>Maîtrise de Kubernetes et Terraform</li><li>Expérience en conseil et gestion de projet</li><li>Excellentes capacités de communication et de présentation</li></ul>",
+        "excerpt": "Consultant expérimenté en architectures cloud pour accompagner nos clients dans leur transformation digitale. Vous interviendrez sur des missions stratégiques et techniques auprès de grands comptes.",
+        "location": "Paris",
+        "contract_type": "CDI",
+        "experience": "5+ ans",
+        "skills": [
+            "AWS/GCP/Azure",
+            "Kubernetes",
+            "Terraform",
+            "DevOps",
+            "FinOps"
+        ],
+        "icon": "Cloud"
+    }
+]

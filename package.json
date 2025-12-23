@@ -1,0 +1,11 @@
+{
+  "name": "directus-beewton",
+  "private": true,
+  "type": "commonjs",
+  "dependencies": {
+    "@directus/types": "^13.5.0",
+    "directus": "latest",
+    "mysql2": "latest",
+    "nodemailer": "^7.0.11"
+  }
+}

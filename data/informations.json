@@ -1,0 +1,23 @@
+[
+  {
+    "site_title": "Beewton - Agence Web Créative",
+    "site_description": "Agence web spécialisée dans la création de sites sur mesure et le développement d'applications web.",
+    "site_url": "https://beewton.fr",
+    "company_name": "Beewton",
+    "company_email": "contact@beewton.fr",
+    "company_phone": "01 23 45 67 89",
+    "company_address": "123 Rue du Progrès, 75000 Paris",
+    "company_siret": "123 456 789 00012",
+    "social_facebook": "https://facebook.com/beewton",
+    "social_twitter": "https://twitter.com/beewton",
+    "social_linkedin": "https://linkedin.com/company/beewton",
+    "social_instagram": "https://instagram.com/beewton",
+    "seo_keywords": ["agence web", "création site internet", "développement web", "référencement naturel"],
+    "google_analytics_id": "UA-12345678-1",
+    "privacy_policy": "<p>Votre vie privée est importante pour nous. Nous nous engageons à protéger vos données personnelles.</p>",
+    "terms_of_service": "<p>Conditions générales d'utilisation de nos services.</p>",
+    "cookies_policy": "<p>Ce site utilise des cookies pour améliorer votre expérience de navigation.</p>",
+    "maintenance_mode": false,
+    "maintenance_message": "Notre site est actuellement en maintenance. Nous serons de retour très bientôt !"
+  }
+]

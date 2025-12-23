@@ -1,0 +1,28 @@
+[
+  {
+    "author_name": "Marie Dupont",
+    "author_role": "Directrice Marketing",
+    "company": "Entreprise XYZ",
+    "content": "Leur équipe a su comprendre nos besoins et livrer un site qui dépasse nos attentes. Professionnalisme et réactivité au rendez-vous !",
+    "rating": 5,
+    "status": "published",
+    "featured": true
+  },
+  {
+    "author_name": "Thomas Martin",
+    "author_role": "Entrepreneur",
+    "company": "StartUp Tech",
+    "content": "Accompagnement personnalisé et expertise technique au top. Je recommande vivement leurs services.",
+    "rating": 4,
+    "status": "published"
+  },
+  {
+    "author_name": "Sophie Leroy",
+    "author_role": "Gérante",
+    "company": "Boutique Créative",
+    "content": "La refonte de notre site e-commerce a considérablement augmenté notre taux de conversion. Une équipe à l'écoute et réactive.",
+    "rating": 5,
+    "status": "published",
+    "featured": true
+  }
+]

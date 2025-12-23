@@ -1,0 +1,31 @@
+[
+  {
+    "name": "Jean Dupont",
+    "email": "jean.dupont@example.com",
+    "phone": "0612345678",
+    "company": "Dupont SA",
+    "subject": "Demande de devis",
+    "message": "Bonjour, je souhaiterais obtenir un devis pour la création d'un site vitrine.",
+    "status": "new",
+    "source": "contact_form"
+  },
+  {
+    "name": "Sarah Bernard",
+    "email": "sarah.bernard@example.com",
+    "phone": "0698765432",
+    "company": "Agence Com'Plus",
+    "subject": "Projet d'application mobile",
+    "message": "Nous recherchons un partenaire pour le développement d'une application mobile pour nos clients.",
+    "status": "in_progress",
+    "source": "email"
+  },
+  {
+    "name": "Marc Dubois",
+    "email": "m.dubois@example.com",
+    "phone": "0601020304",
+    "subject": "Support technique",
+    "message": "J'ai un problème avec mon site, pourrions-nous programmer un appel ?",
+    "status": "new",
+    "source": "contact_form"
+  }
+]

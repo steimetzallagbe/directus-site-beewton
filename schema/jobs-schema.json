@@ -1,0 +1,434 @@
+{
+  "collections": [
+    {
+      "collection": "jobs",
+      "meta": {
+        "collection": "jobs",
+        "icon": "work",
+        "note": "Offres d'emploi",
+        "display_template": "{{title}}",
+        "hidden": false,
+        "singleton": false,
+        "translations": null,
+        "archive_field": "status",
+        "archive_value": "archived",
+        "unarchive_value": "draft",
+        "sort_field": "sort"
+      },
+      "schema": {
+        "name": "jobs"
+      }
+    },
+    {
+      "collection": "applications",
+      "meta": {
+        "collection": "applications",
+        "icon": "description",
+        "note": "Candidatures",
+        "display_template": "{{first_name}} {{last_name}} - {{job_id.title}}",
+        "hidden": false,
+        "singleton": false,
+        "translations": null,
+        "archive_field": "status",
+        "archive_value": "rejected",
+        "unarchive_value": "pending"
+      },
+      "schema": {
+        "name": "applications"
+      }
+    }
+  ],
+  "fields": [
+    {
+      "collection": "jobs",
+      "field": "id",
+      "type": "uuid",
+      "meta": { "hidden": true, "special": ["uuid"] },
+      "schema": { "is_primary_key": true }
+    },
+    {
+      "collection": "jobs",
+      "field": "status",
+      "type": "string",
+      "meta": {
+        "width": "full",
+        "options": {
+          "choices": [
+            { "text": "Brouillon", "value": "draft" },
+            { "text": "Publié", "value": "published" },
+            { "text": "Archivé", "value": "archived" }
+          ]
+        },
+        "interface": "select-dropdown",
+        "display": "labels",
+        "display_options": {
+          "choices": [
+            { "text": "Brouillon", "value": "draft", "foreground": "#FFFFFF", "background": "#6B7280" },
+            { "text": "Publié", "value": "published", "foreground": "#FFFFFF", "background": "#10B981" },
+            { "text": "Archivé", "value": "archived", "foreground": "#FFFFFF", "background": "#EF4444" }
+          ]
+        }
+      },
+      "schema": {
+        "default_value": "draft",
+        "is_nullable": false
+      }
+    },
+    {
+      "collection": "jobs",
+      "field": "sort",
+      "type": "integer",
+      "meta": {
+        "interface": "input",
+        "hidden": true
+      },
+      "schema": {}
+    },
+    {
+      "collection": "jobs",
+      "field": "date_created",
+      "type": "timestamp",
+      "meta": {
+        "special": ["date-created"],
+        "interface": "datetime",
+        "readonly": true,
+        "hidden": true,
+        "width": "half"
+      },
+      "schema": {}
+    },
+    {
+      "collection": "jobs",
+      "field": "date_updated",
+      "type": "timestamp",
+      "meta": {
+        "special": ["date-updated"],
+        "interface": "datetime",
+        "readonly": true,
+        "hidden": true,
+        "width": "half"
+      },
+      "schema": {}
+    },
+    {
+      "collection": "jobs",
+      "field": "title",
+      "type": "string",
+      "meta": {
+        "interface": "input",
+        "required": true,
+        "width": "full"
+      },
+      "schema": {
+        "is_nullable": false
+      }
+    },
+    {
+      "collection": "jobs",
+      "field": "slug",
+      "type": "string",
+      "meta": {
+        "interface": "input",
+        "required": true,
+        "width": "full",
+        "note": "URL-friendly identifier (ex: developpeur-fullstack-react)"
+      },
+      "schema": {
+        "is_nullable": false,
+        "is_unique": true
+      }
+    },
+    {
+      "collection": "jobs",
+      "field": "description",
+      "type": "text",
+      "meta": {
+        "interface": "input-rich-text-html",
+        "width": "full"
+      },
+      "schema": {}
+    },
+    {
+      "collection": "jobs",
+      "field": "location",
+      "type": "string",
+      "meta": {
+        "interface": "input",
+        "width": "half"
+      },
+      "schema": {}
+    },
+    {
+      "collection": "jobs",
+      "field": "contract_type",
+      "type": "string",
+      "meta": {
+        "interface": "select-dropdown",
+        "width": "half",
+        "options": {
+          "choices": [
+            { "text": "CDI", "value": "CDI" },
+            { "text": "CDD", "value": "CDD" },
+            { "text": "Stage", "value": "Stage" },
+            { "text": "Alternance", "value": "Alternance" },
+            { "text": "Freelance", "value": "Freelance" }
+          ]
+        }
+      },
+      "schema": {}
+    },
+    {
+      "collection": "jobs",
+      "field": "experience",
+      "type": "string",
+      "meta": {
+        "interface": "input",
+        "width": "half",
+        "note": "Ex: 3-5 ans, 5+ ans"
+      },
+      "schema": {}
+    },
+    {
+      "collection": "jobs",
+      "field": "skills",
+      "type": "json",
+      "meta": {
+        "interface": "tags",
+        "width": "full",
+        "note": "Compétences requises"
+      },
+      "schema": {}
+    },
+    {
+      "collection": "jobs",
+      "field": "icon",
+      "type": "string",
+      "meta": {
+        "interface": "select-dropdown",
+        "width": "half",
+        "note": "Icône Lucide",
+        "options": {
+          "choices": [
+            { "text": "Code", "value": "Code" },
+            { "text": "Palette", "value": "Palette" },
+            { "text": "Database", "value": "Database" },
+            { "text": "Cloud", "value": "Cloud" }
+          ]
+        }
+      },
+      "schema": {
+        "default_value": "Code"
+      }
+    },
+    {
+      "collection": "applications",
+      "field": "id",
+      "type": "uuid",
+      "meta": {
+        "hidden": true,
+        "readonly": true,
+        "interface": "input",
+        "special": ["uuid"]
+      },
+      "schema": {
+        "is_primary_key": true,
+        "has_auto_increment": false
+      }
+    },
+    {
+      "collection": "applications",
+      "field": "status",
+      "type": "string",
+      "meta": {
+        "width": "full",
+        "options": {
+          "choices": [
+            { "text": "En attente", "value": "pending" },
+            { "text": "Examinée", "value": "reviewed" },
+            { "text": "Acceptée", "value": "accepted" },
+            { "text": "Refusée", "value": "rejected" }
+          ]
+        },
+        "interface": "select-dropdown",
+        "display": "labels",
+        "display_options": {
+          "choices": [
+            { "text": "En attente", "value": "pending", "foreground": "#FFFFFF", "background": "#F59E0B" },
+            { "text": "Examinée", "value": "reviewed", "foreground": "#FFFFFF", "background": "#3B82F6" },
+            { "text": "Acceptée", "value": "accepted", "foreground": "#FFFFFF", "background": "#10B981" },
+            { "text": "Refusée", "value": "rejected", "foreground": "#FFFFFF", "background": "#EF4444" }
+          ]
+        }
+      },
+      "schema": {
+        "default_value": "pending",
+        "is_nullable": false
+      }
+    },
+    {
+      "collection": "applications",
+      "field": "date_created",
+      "type": "timestamp",
+      "meta": {
+        "special": ["date-created"],
+        "interface": "datetime",
+        "readonly": true,
+        "width": "half"
+      },
+      "schema": {}
+    },
+    {
+      "collection": "applications",
+      "field": "date_updated",
+      "type": "timestamp",
+      "meta": {
+        "special": ["date-updated"],
+        "interface": "datetime",
+        "readonly": true,
+        "width": "half"
+      },
+      "schema": {}
+    },
+    {
+      "collection": "applications",
+      "field": "job_id",
+      "type": "uuid",
+      "meta": {
+        "interface": "select-dropdown-m2o",
+        "display": "related-values",
+        "display_options": {
+          "template": "{{title}}"
+        },
+        "required": true,
+        "width": "full"
+      },
+      "schema": {
+        "is_nullable": false
+      }
+    },
+    {
+      "collection": "applications",
+      "field": "first_name",
+      "type": "string",
+      "meta": {
+        "interface": "input",
+        "required": true,
+        "width": "half"
+      },
+      "schema": {
+        "is_nullable": false
+      }
+    },
+    {
+      "collection": "applications",
+      "field": "last_name",
+      "type": "string",
+      "meta": {
+        "interface": "input",
+        "required": true,
+        "width": "half"
+      },
+      "schema": {
+        "is_nullable": false
+      }
+    },
+    {
+      "collection": "applications",
+      "field": "email",
+      "type": "string",
+      "meta": {
+        "interface": "input",
+        "required": true,
+        "width": "half"
+      },
+      "schema": {
+        "is_nullable": false
+      }
+    },
+    {
+      "collection": "applications",
+      "field": "phone",
+      "type": "string",
+      "meta": {
+        "interface": "input",
+        "width": "half"
+      },
+      "schema": {}
+    },
+    {
+      "collection": "applications",
+      "field": "cover_letter",
+      "type": "text",
+      "meta": {
+        "interface": "input-multiline",
+        "width": "full"
+      },
+      "schema": {}
+    },
+    {
+      "collection": "applications",
+      "field": "resume_url",
+      "type": "uuid",
+      "meta": {
+        "interface": "file",
+        "width": "full"
+      },
+      "schema": {}
+    },
+    {
+      "collection": "applications",
+      "field": "linkedin_url",
+      "type": "string",
+      "meta": {
+        "interface": "input",
+        "width": "half"
+      },
+      "schema": {}
+    },
+    {
+      "collection": "applications",
+      "field": "portfolio_url",
+      "type": "string",
+      "meta": {
+        "interface": "input",
+        "width": "half"
+      },
+      "schema": {}
+    }
+  ],
+  "relations": [
+    {
+      "collection": "applications",
+      "field": "job_id",
+      "related_collection": "jobs",
+      "meta": {
+        "many_collection": "applications",
+        "many_field": "job_id",
+        "one_collection": "jobs",
+        "one_field": null,
+        "one_collection_field": null,
+        "one_allowed_collections": null,
+        "junction_field": null,
+        "sort_field": null,
+        "one_deselect_action": "nullify"
+      },
+      "schema": {
+        "on_delete": "SET NULL"
+      }
+    },
+    {
+      "collection": "applications",
+      "field": "resume_url",
+      "related_collection": "directus_files",
+      "meta": {
+        "many_collection": "applications",
+        "many_field": "resume_url",
+        "one_collection": "directus_files",
+        "one_field": null
+      },
+      "schema": {
+        "on_delete": "SET NULL"
+      }
+    }
+  ]
+}

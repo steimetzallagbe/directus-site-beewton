@@ -1,0 +1,13 @@
+{
+    "name": "send-application-email-hook",
+    "version": "1.0.0",
+    "keywords": [
+        "directus-extension",
+        "directus-hook"
+    ],
+    "directus:extension": {
+        "type": "hook",
+        "path": "index.js",
+        "host": "^10.0.0"
+    }
+}

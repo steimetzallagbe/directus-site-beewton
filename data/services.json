@@ -1,0 +1,51 @@
+[
+  {
+    "title": "Développement Web sur Mesure",
+    "slug": "developpement-web-sur-mesure",
+    "description": "Création de sites web et applications sur mesure adaptés à vos besoins spécifiques.",
+    "icon": "code",
+    "status": "active",
+    "is_featured": true,
+    "features": [
+      {
+        "title": "Site Vitrine",
+        "description": "Présentez votre entreprise en ligne avec élégance et professionnalisme."
+      },
+      {
+        "title": "E-commerce",
+        "description": "Vendez vos produits en ligne avec une boutique personnalisée."
+      }
+    ]
+  },
+  {
+    "title": "Refonte de Site Web",
+    "slug": "refonte-site-web",
+    "description": "Modernisez votre présence en ligne avec une refonte complète et performante.",
+    "icon": "brush",
+    "status": "active",
+    "features": [
+      {
+        "title": "Audit complet",
+        "description": "Analyse détaillée de votre site existant et recommandations."
+      }
+    ]
+  },
+  {
+    "title": "Application Mobile",
+    "slug": "application-mobile",
+    "description": "Développement d'applications mobiles natives et cross-platform.",
+    "icon": "phone_iphone",
+    "status": "active",
+    "is_featured": true,
+    "features": [
+      {
+        "title": "Applications iOS et Android",
+        "description": "Développement pour les deux plateformes majeures."
+      },
+      {
+        "title": "Applications PWA",
+        "description": "Applications Web Progressives pour une expérience mobile optimale."
+      }
+    ]
+  }
+]
